@@ -1,0 +1,19 @@
+.project-item {
+    position: relative;
+    height: 250px;
+    width: 250px;
+    text-align: center;
+}
+.project-item section:nth-child(1) {
+    text-align: center;
+    position: absolute;
+    display: none;
+    z-index: 100;
+}
+.project-item img {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: .5;
+}

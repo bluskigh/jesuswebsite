@@ -5,7 +5,7 @@ html, body {
     width: 100%;
     background: white;
 }
-nav, li, h1, h2, h3, h4, h5, h6, p, ul, button, section, div {margin: 0;padding: 0;}
+nav, li, h1, h2, h3, h4, h5, h6, p, ul, button, section, div, a {margin: 0;padding: 0;}
 /*
  * Two axis in flexbox: Main axis, Cross axis.
  * Cross axis is perpendicular to main axis, therefor, if flex-direction is row then cross axis controls column alignment (y) and main axis controls row alignment (x).
@@ -68,7 +68,7 @@ nav, li, h1, h2, h3, h4, h5, h6, p, ul, button, section, div {margin: 0;padding:
  * Used when background is another color than white.
  * Example: background of a certain section is red, and you want the items to be max 75%. Making the certain section 75% total will show the white background on the remaining 12.5% on the left and right.
  * */
-.container-limited {width: 75%;}
+.container-limited {width: 75%; padding: 5em 0;}
 
 .container-full {width:100%;}
 
@@ -77,3 +77,4 @@ nav, li, h1, h2, h3, h4, h5, h6, p, ul, button, section, div {margin: 0;padding:
 .normal-padding { padding-top: 1em; }
 .medium-padding { padding-top: 2em; }
 .large-padding { padding-top: 3em; }
+.padding-sides { padding: 0 1em; }
