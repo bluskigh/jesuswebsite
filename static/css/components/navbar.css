@@ -1,0 +1,19 @@
+nav {
+    width: 100%;
+    background: black;
+    color: white;
+    position: absolute;
+    top: 0;
+    padding-top: 2em;
+}
+nav ul {
+    width: 100%;
+}
+.clear li {
+    list-style-type: none;
+    padding: 0 .5em;
+}
+.clear li a {
+    text-decoration: none;
+    color: white;
+}

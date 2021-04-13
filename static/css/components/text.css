@@ -1,0 +1,6 @@
+/*Change general colors to more defined colors*/
+.important {
+    color: red;
+    text-decoration: underline;
+    font-style: italic;
+}
