@@ -7,3 +7,4 @@ p, li, a { font-family: 'Lato', sans-serif; }
 .important {font-style: italic; color: red;}
 
 .text-inline { display: inline; }
+.white { color: white}

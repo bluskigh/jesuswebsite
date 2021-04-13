@@ -27,7 +27,7 @@
             <nav class="flex flex-jc flex-ac">
                 <section class="container-limited">
                     <ul class="flex flex-row flex-jsb flex-ac clear">
-                        <section class="flex flex-row flex-jsa hundred">
+                        <section class="flex flex-row flex-jsa">
                             <li><a class="nav-current" href="#">Home</a></li>
                             <li><a class="nav-n-current" href="#">Projects</a></li>
                             <li><a class="nav-n-current important" href="#">Resume</a></li>
@@ -57,7 +57,7 @@
         </div>
         <!--Body Content-->
         <div id="body" class="flex flex-col flex-ac">
-            <section class="container-limited flex flex-col flex-jc flex-ac">
+            <section class="container-limited flex flex-col flex-jc flex-ac large-padding">
                 <section class="flex flex-row flex-jsa flex-ac">
                     <section class="flex flex-col half">
                         <h2>Android Developer</h2>
@@ -84,7 +84,7 @@
                         <a class="important" href="#">&lt; Link to project</a>
                     </section>
                 </section>
-                <section class="flex flex-row flex-jsa flex-ac medium-padding">
+                <section class="flex flex-row flex-jsa flex-ac">
                     <section class="flex flex-col half">
                         <h2>Relational Database Manager</h2>
                         <p>Information about x years you have been developing 
@@ -99,26 +99,27 @@
                 </section>
             </section>
             <!--Projects Section-->
-            <section class="container-limited flex flex-row flex-ac flex-jsa medium-padding">
-                <section class="flex flex-col">
-                    <h2>Projects</h2>
-                    <a href="#" class="important">See More &gt;</a>
-                </section>
+            <section class="container-full flex flex-jc flex-ac" style="background: black; color: white;">
+                <section class="container-limited flex flex-row flex-ac flex-jsa medium-padding">
+                    <section class="flex flex-col">
+                        <h2>Projects</h2>
+                        <a href="#" class="important">See More &gt;</a>
+                    </section>
                     <section class="flex flex-row flex-jsb half-quarter"> 
                         <!--project item-->
                         <section class="flex project-item">
-                            <!--background image-->
-                            <img src="https://images.unsplash.com/photo-1618143336431-06143b6747e3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80">
                             <section class="flex flex-col flex-jc flex-ac" style="height: 100%; width: 100%;">
                                 <h3>Project Title</h3>
                                 <!--languages created with-->
-                                <section class="flex flex-overflow flex-row flex-jc">
-                                    <a class="">Python</a>
-                                    <a class="">Flask</a>
-                                    <a class="">SQLAlchemy</a>
-                                    <a class="">Jinja</a>
+                                <section class="flex flex-wrap flex-row flex-jc">
+                                    <p class="project-language">Python</p>
+                                    <p class="project-language">Python</p>
+                                    <p class="project-language">Python</p>
+                                    <p class="project-language">Python</p>
                                 </section>
                             </section>
+                             <!--background image-->
+                            <img src="https://images.unsplash.com/photo-1618143336431-06143b6747e3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80">
                         </section>
                         <section class="flex project-item">
                             <!--background image-->
@@ -126,29 +127,85 @@
                             <section class="flex flex-col flex-jc flex-ac" style="height: 100%; width: 100%;">
                                 <h3>Project Title</h3>
                                 <!--languages created with-->
-                                <section class="flex flex-overflow flex-row flex-jc">
-                                    <a class="">Python</a>
-                                    <a class="">Flask</a>
-                                    <a class="">SQLAlchemy</a>
-                                    <a class="">Jinja</a>
+                                <section class="flex flex-wrap flex-row flex-jc">
+                                    <p class="project-language">Python</p>
+                                    <p class="project-language">Python</p>
+                                    <p class="project-language">Python</p>
+                                    <p class="project-language">Python</p>
                                 </section>
                             </section>
                         </section>
                         <section class="flex project-item">
                             <!--background image-->
                             <img src="https://images.unsplash.com/photo-1618143336431-06143b6747e3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80">
-                            <section class="flex flex-col flex-jc flex-ac" style="height: 100%; width: 100%;">
+                            <section class="flex flex-col flex-jc flex-ac padding-sides" style="height: 100%; width: 100%;">
                                 <h3>Project Title</h3>
                                 <!--languages created with-->
-                                <section class="flex flex-overflow flex-row flex-jc">
-                                    <a class="">Python</a>
-                                    <a class="">Flask</a>
-                                    <a class="">SQLAlchemy</a>
-                                    <a class="">Jinja</a>
+                                <section class="flex flex-wrap flex-row flex-jc">
+                                    <p class="project-language">Python</p>
+                                    <p class="project-language">Python</p>
+                                    <p class="project-language">Python</p>
+                                    <p class="project-language">Python</p>
                                 </section>
                             </section>
                         </section>
                     </section>
+                </section>
+
+            </section>
+            <!--75% container-->
+            <section class="container-limited flex flex-row flex-jsb t-center mv-padding"> 
+                <!-- Technologies -->
+                <section class="flex flex-col half">
+                    <h2>Technologies</h2>
+                    <section class="flex flex-row flex-wrap flex-jsa hundred">
+                        <div style="background: red; height: 100px; width: 100px; border-radius: 50%;" class="normal-margin"></div>
+                        <div style="background: red; height: 100px; width: 100px; border-radius: 50%;" class="normal-margin"></div>
+                        <div style="background: red; height: 100px; width: 100px; border-radius: 50%;" class="normal-margin"></div>
+                        <div style="background: red; height: 100px; width: 100px; border-radius: 50%;" class="normal-margin"></div>
+                        <div style="background: red; height: 100px; width: 100px; border-radius: 50%;" class="normal-margin"></div>
+                        <div style="background: red; height: 100px; width: 100px; border-radius: 50%;" class="normal-margin"></div>
+                        <div style="background: red; height: 100px; width: 100px; border-radius: 50%;" class="normal-margin"></div>
+                        <div style="background: red; height: 100px; width: 100px; border-radius: 50%;" class="normal-margin"></div>
+                    </section>
+                </section>
+
+                <section class="flex flex-col half nv-padding">
+                    <!-- skills -->
+                    <h2>Skills</h2>
+                    <section class="flex flex-col flex-ac flex-wrap hundred" style="height: 100%">
+                        <div class="normal-margin progress-parent">
+                            <div class="progress-child flex flex-jc flex-ac">
+                                <p>75%</p>
+                            </div>
+                        </div> 
+                        <div class="normal-margin progress-parent">
+                            <div class="progress-child flex flex-jc flex-ac">
+                                <p>75%</p>
+                            </div>
+                        </div> 
+                        <div class="normal-margin progress-parent">
+                            <div class="progress-child flex flex-jc flex-ac" style="width: 80%">
+                                <p><strong>Full Stack</strong> | 80%</p>
+                            </div>
+                        </div> 
+                        <div class="normal-margin progress-parent">
+                            <div class="progress-child flex flex-jc flex-ac" style="width: 90%">
+                                <p><strong>Java</strong> | 90%</p>
+                            </div>
+                        </div> 
+                        <div class="normal-margin progress-parent">
+                            <div class="progress-child flex flex-jc flex-ac" style="width: 50%">
+                                <p><strong>Python</strong> | 50%</p>
+                            </div>
+                        </div> 
+                        <div class="normal-margin progress-parent">
+                            <div class="progress-child flex flex-jc flex-ac" style="width: 90%">
+                                <p>90%</p>
+                            </div>
+                        </div> 
+                    </section>
+                </section>
             </section>
         </div>
     </div>
