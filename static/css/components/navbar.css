@@ -1,14 +1,15 @@
 nav {
+    height: 10vh;
     width: 100%;
-    background: black;
     color: white;
     position: absolute;
     top: 0;
-    padding-top: 2em;
+    background: black;
 }
 nav ul {
     width: 100%;
 }
+/*NAVs can be used over the website, you may want certain NAVs with li's to contain list-types, this just clears list-style-type, and decoration on links from the main nav not all navs on the page.*/
 .clear li {
     list-style-type: none;
     padding: 0 .5em;
@@ -17,3 +18,10 @@ nav ul {
     text-decoration: none;
     color: white;
 }
+
+/*Adds bottom border to the current selected item in the navbar*/
+.nav-current { border-bottom: 3px solid red; }
+/*Needed in order to to add responsive hover over non-current link in the navbar*/
+.nav-n-current {}
+.nav-n-current:hover { border-bottom: 3px solid rgb(255, 255, 255, .8); }
+

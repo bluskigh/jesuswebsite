@@ -3,6 +3,7 @@ html, body {
     margin: 0;
     padding: 0;
     width: 100%;
+    background: white;
 }
 nav, li, h1, h2, h3, h4, h5, h6, p, ul, button, section, div {margin: 0;padding: 0;}
 /*
@@ -26,6 +27,16 @@ nav, li, h1, h2, h3, h4, h5, h6, p, ul, button, section, div {margin: 0;padding:
 .flex-ab  { align-items: flex-baseline; } 
 .flex-astretch  { align-items: stretch; } 
 
+/*Text Alignment*/
+.t-center { text-align: center; }
+.t-left { text-align: left; }
+.t-right { text-align: right; }
+
+/*grow*/
+.half { width: 50% }
+.quarter { width: 25% }
+.half-quarter { width: 75% }
+
 #body-container {
     width: 100%;
     min-height: 100%;
@@ -33,14 +44,14 @@ nav, li, h1, h2, h3, h4, h5, h6, p, ul, button, section, div {margin: 0;padding:
     position: relative;
 }
 #body-container #header {
-    background: black;
-    color: white;
-    height: 100vh;
+    padding-top: 10vh;
+    color: black;
+    height: 90vh;
+    width: 100%;
     position: relative;
 }
 #body-container #body {
     height: 100%;
-    background: red;
     width: 100%;
     padding-bottom: 10vh;
 }
@@ -57,6 +68,12 @@ nav, li, h1, h2, h3, h4, h5, h6, p, ul, button, section, div {margin: 0;padding:
  * Used when background is another color than white.
  * Example: background of a certain section is red, and you want the items to be max 75%. Making the certain section 75% total will show the white background on the remaining 12.5% on the left and right.
  * */
-.container {width: 75%;}
+.container-limited {width: 75%;}
 
-.hundered {width:100%;}
+.container-full {width:100%;}
+
+
+/*Space*/
+.normal-padding { padding-top: 1em; }
+.medium-padding { padding-top: 2em; }
+.large-padding { padding-top: 3em; }

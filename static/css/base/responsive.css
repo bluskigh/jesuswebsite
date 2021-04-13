@@ -1,0 +1,29 @@
+@media (max-width: 1000px) {
+    #header-content {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+    #header-content section:nth-child(1) {
+        width: 75%;
+    }
+}
+/*For ipad*/
+@media (max-width: 769px) and (max-height: 1025px) {
+    #body-container #header {
+        height: 50vh;
+        min-height: 50vh;
+    }
+}
+/*For phone*/
+@media (max-width: 500px) {
+    #body-container #header {
+        height: 100vh;
+        min-height: 100vh;
+    }
+}
+
+@media (max-width: 769px) {
+    #header-content section:nth-child(2) {
+        display: none;
+    }
+}
