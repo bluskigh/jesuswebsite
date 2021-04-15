@@ -1,1 +1,0 @@
-Contains sections of the page such as: header, footer, and possible asides for blog

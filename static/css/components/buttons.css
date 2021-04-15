@@ -1,7 +1,0 @@
-.important-button { background: red; border: none; padding: .5em 2em; color: white; }
-.button { padding: .5em 2em; transition: .3s linear;  border-radius: .2em;}
-.button:hover {
-    cursor: pointer;
-    background: black;
-    box-shadow: 0em 0em .4em black;
-}
