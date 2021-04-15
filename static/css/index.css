@@ -164,11 +164,6 @@ header img {
     color: white;
     height: 100%;
     width: 50%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-
     transition: .5s ease;
 }
 .project-item:nth-child(even) {
@@ -177,13 +172,26 @@ header img {
 .project-item:hover {
     transform: scale(1.2);
 }
-.project-languages {
+.projects-languages {
 }
 .project-face {
+    background: red;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     transition: .3s ease;
 }
 .project-back {
+    padding: 1em;
     transition: .3s ease;
+}
+.project-back img {
+    shape-outside: circle(50%);
+    padding-right: .8em;
+    float: left;
 }
 .inactive {
     z-index: -4;
@@ -195,6 +203,15 @@ header img {
 .inactive h3 {
     opacity: .5;
 }
+#projects-container a {
+    color: red;
+    text-decoration: underline; 
+    transition: .5s ease;
+}
+#projects-container a:hover {
+    transform: scale(1.1);
+}
+
 
 
 /*Other*/
@@ -212,17 +229,10 @@ header img {
     float: left;
 }
 
-a {
-    color: red;
-    text-decoration: underline; 
-    transition: .5s ease;
-}
-a:hover {
-    transform: scale(1.1);
-}
 .hidden {
     opacity: 0;
-    z-index: -2;
+    z-index: -1;
+    top: 0;
     position: absolute;
 }
 .reveal {
