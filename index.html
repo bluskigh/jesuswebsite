@@ -63,46 +63,58 @@
                 <div class="project-face">
                     <h3>All Pomodoro</h3>
                     <div class="project-languages">
-                        <button class="button">Python</button>
-                        <button class="button">Java</button>
-                        <button class="button">SQL</button>
+                        <button class="button" style="background: blue;">Java</button>
+                        <button class="button" style="background: yellow;">Python</button>
+                        <button class="button" style="background: red;">SQL</button>
                     </div>
                 </div>
                 <div class="hidden project-back">
-                    <p>Informration here</p>
-                    <button class="button">See More</button>
+                    <section>
+                        <h3>All Pomodoro</h3>
+                        <!--define height in img tag, lets browser know how much space to put aside, will speed up loading of website--> 
+                        <img src="./static/images/all_pomodoro.png" height="80px" width="80px">
+                        <p>
+                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti.
+                        </p>
+                    <section>
                 </div>
             </div>
             <div class="project-item">
                 <div class="project-face">
                     <h3>All Pomodoro</h3>
                     <div class="project-languages">
-                        <button class="button">Python</button>
-                        <button class="button">Java</button>
-                        <button class="button">SQL</button>
+                        <button class="button" style="background: blue;">Java</button>
+                        <button class="button" style="background: yellow;">Python</button>
+                        <button class="button" style="background: red;">SQL</button>
                     </div>
                 </div>
                 <div class="hidden project-back">
-                    <!--define height in img tag, lets browser know how much space to put aside, will speed up loading of website--> 
-                    <img src="./static/images/all_pomodoro.png" height="80px" width="80px">
-                    <p>
-                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti.
-                    </p>
-                    <button class="button">See More</button>
+                    <section>
+                        <!--define height in img tag, lets browser know how much space to put aside, will speed up loading of website--> 
+                        <img src="./static/images/all_pomodoro.png" height="80px" width="80px">
+                        <p>
+                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti.
+                        </p>
+                    <section>
                 </div>
             </div>
             <div class="project-item">
                 <div class="project-face">
                     <h3>All Pomodoro</h3>
                     <div class="project-languages">
-                        <button class="button">Python</button>
-                        <button class="button">Java</button>
-                        <button class="button">SQL</button>
+                        <button class="button" style="background: blue;">Java</button>
+                        <button class="button" style="background: yellow;">Python</button>
+                        <button class="button" style="background: red;">SQL</button>
                     </div>
                 </div>
                 <div class="hidden project-back">
-                    <p>Informration here</p>
-                    <button class="button">See More</button>
+                    <section>
+                        <!--define height in img tag, lets browser know how much space to put aside, will speed up loading of website--> 
+                        <img src="./static/images/all_pomodoro.png" height="80px" width="80px">
+                        <p>
+                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti.
+                        </p>
+                    <section>
                 </div>
             </div>
        </div>
@@ -116,6 +128,7 @@
                 this.querySelector(".project-face").classList.toggle("hidden");
                 // unhide the back
                 this.querySelector(".project-back").classList.toggle("hidden");
+                // display none on the project face (500ms takes .5s  to ease the front face out of view, so after its out, display to none)
                 // make others appear disabled
                 for (const project of projects) {
                     if (project != this) {
