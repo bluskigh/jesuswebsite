@@ -47,7 +47,10 @@ header > div {
 }
 #logo { user-select: none; -moz-user-select: none; -ms-user-select: none;  font-size: 1.5em;}
 #logo:hover { cursor: default; }
-
+header img {
+    position: absolute;
+    left: -60;
+}
 #header-left-background {
     border-top: .2em solid black;
     transform: rotate(90deg); 
@@ -140,13 +143,57 @@ header > div {
 }
 
 /*Project section*/
-#projects {
+#projects-container {
     padding: var(--normal-padding) 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 75%;
+    margin: 0 auto;
+    height: 50vh;
+}
+#projects {
+    height: 100%;
+    width: 80%;
+    display: flex;
+    align-items: center;
+}
+.project-item {
+    background: var(--main-color);
+    color: white;
+    height: 100%;
+    width: 50%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100%;
-    height: 50vh;
+    justify-content: center;
+
+    transition: .5s ease;
+}
+.project-item:nth-child(even) {
+    margin: 0 .5em;
+}
+.project-item:hover {
+    transform: scale(1.2);
+}
+.project-languages {
+}
+.project-face {
+    transition: .3s ease;
+}
+.project-back {
+    transition: .3s ease;
+}
+.inactive {
+    z-index: -4;
+    background: black;
+}
+.inactive button {
+    opacity: .5;
+}
+.inactive h3 {
+    opacity: .5;
 }
 
 
@@ -164,3 +211,23 @@ header > div {
     padding-right: .3em;
     float: left;
 }
+
+a {
+    color: red;
+    text-decoration: underline; 
+    transition: .5s ease;
+}
+a:hover {
+    transform: scale(1.1);
+}
+.hidden {
+    opacity: 0;
+    z-index: -2;
+    position: absolute;
+}
+.reveal {
+    opacity: 1;
+    z-index: 2;
+    box-shadow: 0 0 2em white;
+}
+
