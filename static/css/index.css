@@ -2,13 +2,17 @@
     --main-color: #2A2626;
     --secondary-color: #F0E5E5;
     --accent-color: #DF2222;
+    --secondary-accent-color: #E3CF18;
     --normal-padding: 3em;
 }
+::-moz-selection { background-color: var(--accent-color); }
+::selection { background-color: var(--accent-color); }
 html, body, ul, li, a, h1, h2, h3, h4, h5, p { margin: 0; padding: 0; }
 body { background: white; color: var(--main-color); }
 h1, h2, h3, h4, h5, h6, p, li { font-family: 'Roboto', sans-serif; }
-h1 { font-weight: 900; }
+h1 { font-weight: 900; font-size: 4em; }
 h2 { font-size: 2em; }
+h3 { font-size: 1.5em; }
 li { font-weight: 900; }
 p { font-family: 'Roboto', sans-serif; font-weight: 300; }
 a { text-decoration: none; color: var(--main-color); }
@@ -60,6 +64,7 @@ header img {
     z-index: -2;
     opacity: .2;
     font-size: 5em;
+    user-select: none;
 }
 #header-right-background {
     border-bottom: 1px solid black;
@@ -69,6 +74,7 @@ header img {
     z-index: -2;
     opacity: .2;
     font-size: 5em;
+    user-select: none;
 }
 
 .nav-current { border-bottom: .3em solid var(--accent-color); }
@@ -110,7 +116,7 @@ header img {
 }
 
 #im-a {
-    padding: var(--normal-padding) 0;
+    padding: var(--normal-padding) 0 5em 0;
     width: 100%;
     text-align: left;
     background: linear-gradient(to right, #251F1F, #4E4040);
@@ -219,6 +225,64 @@ header img {
 .project-item:hover {
     cursor: pointer;
     box-shadow: 0em 0em 2em black;
+}
+
+/*Skills section*/
+#skills-container {
+    background: var(--secondary-accent-color);
+    height: 50vh;
+    padding-bottom: var(--normal-padding);
+    padding-top: 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+}
+#skills-container h2 {
+    color: white;
+    font-size: 2.5em;
+}
+#skills-container li {
+    font-weight: 200;
+}
+#skills-bullet-container {
+    width: 75%;
+    display: flex;
+    justify-content: space-around;
+}
+
+#skills-progress {
+    width: 75%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.progress-container {
+    margin: .5em 0;
+    background: var(--main-color);
+    height: 1.2em;
+    width: 35%;
+    position: relative;
+}
+.progress-percent {
+    height: 100%;
+    /*Percent put here*/
+    width: 80%;
+    background: linear-gradient(to left, red, darkred);
+}
+.progress-percentage {
+    position: absolute;
+    right: -35;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.progress-title {
+    position: absolute;
+    top: -15;
+    left: 0;
+    color: white;
+    -webkit-text-stroke: 1px var(--main-color);
 }
 
 /*Other*/
