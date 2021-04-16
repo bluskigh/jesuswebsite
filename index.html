@@ -15,8 +15,10 @@
 </head>
 <body>
 
+    <!--
     <h1 id="header-left-background">Jesus</h1>
     <h1 id="header-right-background">Callejas</h1>
+    -->
     <header>
         <ul>
             <li id="logo">JC</li>
@@ -127,7 +129,6 @@
        <div class="transition-arrow"></div>
     </section>
     <!--End of skills section-->
-
 
     <!--Project section-->
     <section id="projects-container">
@@ -271,7 +272,23 @@
                 // unhide the back
                 this.querySelector(".project-back").classList.toggle("hidden");
             })
-        })
+        });
+        const header = document.querySelector("header");
+        const mainNavigation = document.querySelector("header ul");
+        const endOfHeader = header.offsetHeight;
+        window.addEventListener("scroll", function() {
+            if (this.scrollY > endOfHeader) {
+                if (!mainNavigation.classList.contains("dark")) {
+                    // turn on dark mode, past the main section of the page
+                    mainNavigation.classList.toggle("dark");
+                }
+            } else {
+                if (mainNavigation.classList.contains("dark")) {
+                    // turn of dark mode, back on the main section "Hi I'm Jesus Callejas" section
+                    mainNavigation.classList.toggle("dark");
+                }
+            }
+        });
     </script>
 </body>
 </html>
