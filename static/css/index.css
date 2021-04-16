@@ -47,9 +47,7 @@ header ul div li a {
 header ul div li.nav-n-current a:hover {
     color: rgb(0, 0, 0, .5);
 }
-header > div {
-    text-align: center;
-}
+#header-information { text-align: center; }
 #logo { user-select: none; -moz-user-select: none; -ms-user-select: none;  font-size: 1.5em;}
 #logo:hover { cursor: default; }
 header img {
@@ -57,6 +55,7 @@ header img {
     left: -60;
 }
 #header-left-background {
+    position: fixed;
     border-top: .2em solid black;
     transform: rotate(90deg); 
     position: absolute;
@@ -103,18 +102,6 @@ header img {
     to { bottom: 20; }
 }
 
-/*Buttons*/
-.button {
-    border-radius: 1em;
-    border: none;
-    padding: .3em 1em;
-    transition: transform .5s ease;
-}
-.button:hover { cursor: pointer; transform: translateY(-3px); }
-.red-button {
-    background: var(--accent-color);
-    color: var(--secondary-color);
-}
 
 #im-a {
     padding: var(--normal-padding) 0 5em 0;
@@ -230,6 +217,7 @@ header img {
 
 /*Skills section*/
 #skills-container {
+    position: relative;
     background: var(--secondary-accent-color);
     height: 50vh;
     padding-bottom: var(--normal-padding);
@@ -286,6 +274,17 @@ header img {
     -webkit-text-stroke: 1px var(--main-color);
 }
 
+.transition-arrow {
+    width: 0;
+    height: 0;
+    /*Has to be 49 vw otherwise will cause page be longer than view*/
+    border-left: 40vw solid transparent;
+    border-right: 40vw solid transparent;
+    border-top: 100px solid var(--secondary-accent-color);
+    position: absolute;
+    bottom: -40;
+}
+
 /*Contact section*/
 #contact-container {
     background: var(--main-color);
@@ -316,8 +315,8 @@ header img {
 }
 form input,textarea  {
     background: none;
-    border: 2px solid white;
-    color: white;
+    border: 2px solid black;
+    color: black;
     padding: .5em;
     padding-left: 1em;
     font-family: 'Roboto', sans-serif;
@@ -338,6 +337,9 @@ form input,textarea  {
 }
 
 #contact-side-information {
+    height: 100%;
+    width: 50%;
+    color: black;
     margin-bottom: 2em;
 }
 .contact-side-item {
@@ -345,7 +347,6 @@ form input,textarea  {
     align-items: center;
 }
 .contact-side-item img {
-    filter: invert(100%);
     margin-right: .5em;
 }
 .contact-side-item:nth-child(2) {
@@ -365,3 +366,17 @@ form input,textarea  {
     float: left;
 }
 .hidden { display: none; }
+
+/*Buttons*/
+.button {
+    border-radius: 1em;
+    border: none;
+    padding: .3em 1em;
+    transition: transform .5s ease;
+}
+.button:hover { cursor: pointer; transform: translateY(-3px); }
+.red-button {
+    background: var(--accent-color);
+    color: var(--secondary-color);
+}
+
