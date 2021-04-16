@@ -203,14 +203,48 @@
     </section>
     <!--end of projects section-->
 
-    <h1>TODO: Contact section</h1>
-    <h1>TODO: Footer</h1>
-    <h1>TODO: Make skills bullet points indented</h1>
-    <h1>TODO: Add svgs / blobs</h1>
-    <h1>TODO: Make background of skills gradient, not too harsh though.</h1>
-    <h1>TODO: Tell chuy that the buttons on the right can serve as a way to get the user to press on the card, taking them to the project page. </h1> 
+    <section id="contact-container">
+        <div>
+            <h2>Get In Touch</h2>
+            <p>123-123-1234</p>
+            <p>uremail@gmail.com</p>
+            <p>___, FL</p>
+        </div>
+        <form action="#" method="POST">
+            <div class="contact-input">
+                <label for="name">Name</label>
+                <input id="name" type="text" placeholder="">
+            </div>
+            <div class="contact-input">
+                <label for="email">Email</label>
+                <input id="email" type="text" placeholder="">
+            </div>
+            <div id="contact-input-textarea" class="contact-input">
+                <label for="message">Message</label>
+                <textarea id="message" row="20" column="20" placeholder=""></textarea>
+            </div>
+            <button class="button">Send</button>
+        </form>
+    </section>
+    <footer>
+        <div id="footer-navigation">
+            <h4>Jesus Callejas</h4>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Projects</a></li>
+                <li><a href="#">Resume</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+        <div id="footer-social-icons">
+            <div class="social-icon"></div>
+            <div class="social-icon"></div>
+            <div class="social-icon"></div>
+        </div>
+    </footer>
     <script>
-        window.scrollTo(0, 2000);
+        window.scrollTo(0, 2500);
         const projects = document.querySelectorAll(".project-item");
         projects.forEach(item => {
             item.addEventListener("mouseover", function(e) {
