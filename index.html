@@ -14,6 +14,9 @@
     <title>Home | Jesus Callejas</title>
 </head>
 <body>
+
+    <h1 id="header-left-background">Jesus</h1>
+    <h1 id="header-right-background">Callejas</h1>
     <header>
         <ul>
             <li id="logo">JC</li>
@@ -26,18 +29,16 @@
             </div>
         </ul>
         <div id="header-information">
-            <h1 id="header-left-background">Jesus</h1>
-            <h1 id="header-right-background">Callejas</h1>
-            <h1>Jesus Callejas</h1>
+            <h1>Hi I'm, <br> Jesus Callejas</h1>
             <p>Software Developer // Full Stack Developer</p>
         </div>
         <div class="down-arrow"></div>
     </header>
     <section id="im-a">
+        <h2>I'm a </h2>
         <div class="content">
-            <h2>I'm a _</h2>
             <div class="a-item">
-                <div class="item-content">
+                <div class="item-content left">
                     <h3>Android Developer</h3>
                     <div class="border-bottom"></div>
                     <p>
@@ -61,7 +62,8 @@
     <section id="skills-container">
         <h2>Skills</h2>
         <section id="skills-bullet-container">
-            <div class="skills-bullet-container">
+            <div class="skills-bullet">
+                <h3 class="skills-number">01</h3>
                 <h3>Relational Databases</h3>
                 <ul>
                     <li>SQL</li>
@@ -69,7 +71,8 @@
                     <li>Migrations</li>
                 </ul>
             </div>
-            <div class="skills-bullet-container">
+            <div class="skills-bullet">
+                <h3 class="skills-number">02</h3>
                 <h3>Relational Databases</h3>
                 <ul>
                     <li>SQL</li>
@@ -77,7 +80,8 @@
                     <li>Migrations</li>
                 </ul>
             </div>
-            <div class="skills-bullet-container">
+            <div class="skills-bullet">
+                <h3 class="skills-number">03</h3>
                 <h3>Relational Databases</h3>
                 <ul>
                     <li>SQL</li>
@@ -129,10 +133,32 @@
     <section id="projects-container">
         <div>
             <h2>Projects</h2>
-            <a href="#">See more ></a>
+            <a href="#" style="color: red;">See more ></a>
         </div>
         <div id="projects">
             <div class="project-item">
+                <div class="project-number"><h3>01</h3></div>
+                <div class="project-face">
+                    <h3>Store App</h3>
+                    <div class="project-languages">
+                        <button class="button" style="background: blue;">SQL</button>
+                        <button class="button" style="background: yellow;">SQLAlchemy</button>
+                        <button class="button" style="background: red;">ORM</button>
+                    </div>
+                </div>
+                <div class="hidden project-back">
+                    <section>
+                        <h3>Store App</h3>
+                        <!--define height in img tag, lets browser know how much space to put aside, will speed up loading of website--> 
+                        <img src="./static/images/all_pomodoro.png" height="80px" width="80px">
+                        <p>
+                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti.
+                        </p>
+                    <section>
+                </div>
+            </div>
+            <div class="project-item">
+                <div class="project-number"><h3>02</h3></div>
                 <div class="project-face">
                     <h3>All Pomodoro</h3>
                     <div class="project-languages">
@@ -153,6 +179,7 @@
                 </div>
             </div>
             <div class="project-item">
+                <div class="project-number"><h3>03</h3></div>
                 <div class="project-face">
                     <h3>All Pomodoro</h3>
                     <div class="project-languages">
@@ -163,25 +190,7 @@
                 </div>
                 <div class="hidden project-back">
                     <section>
-                        <!--define height in img tag, lets browser know how much space to put aside, will speed up loading of website--> 
-                        <img src="./static/images/all_pomodoro.png" height="80px" width="80px">
-                        <p>
-                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti.
-                        </p>
-                    <section>
-                </div>
-            </div>
-            <div class="project-item">
-                <div class="project-face">
-                    <h3>All Pomodoro</h3>
-                    <div class="project-languages">
-                        <button class="button" style="background: blue;">Java</button>
-                        <button class="button" style="background: yellow;">Python</button>
-                        <button class="button" style="background: red;">SQL</button>
-                    </div>
-                </div>
-                <div class="hidden project-back">
-                    <section>
+                        <h3>All Pomodoro</h3>
                         <!--define height in img tag, lets browser know how much space to put aside, will speed up loading of website--> 
                         <img src="./static/images/all_pomodoro.png" height="80px" width="80px">
                         <p>
@@ -198,8 +207,10 @@
     <h1>TODO: Footer</h1>
     <h1>TODO: Make skills bullet points indented</h1>
     <h1>TODO: Add svgs / blobs</h1>
+    <h1>TODO: Make background of skills gradient, not too harsh though.</h1>
+    <h1>TODO: Tell chuy that the buttons on the right can serve as a way to get the user to press on the card, taking them to the project page. </h1> 
     <script>
-        window.scrollTo(0, 10000);
+        window.scrollTo(0, 2000);
         const projects = document.querySelectorAll(".project-item");
         projects.forEach(item => {
             item.addEventListener("mouseover", function(e) {
