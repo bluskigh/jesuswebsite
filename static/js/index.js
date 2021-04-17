@@ -1,8 +1,11 @@
+const WINDOW_WIDTH = window.innerWidth;
+
 // Universal (changes backgorund color of the header once passed the header section (Hi I'm Jesus Callejas section)
 const projects = document.querySelectorAll(".project-item");
 const header = document.querySelector("header");
 const mainNavigation = document.querySelector("header ul");
 const endOfHeader = header.offsetHeight;
+
 window.addEventListener("scroll", function() {
 if (this.scrollY > endOfHeader-100) {
     if (!mainNavigation.classList.contains("dark")) {
@@ -31,44 +34,38 @@ function projectItemActive(item) {
         // if project is not the currently active one (clicked by user)
         if (project != item) {
             /*Mostly for phones*/
-            // if inactive project does not contain the inactive class, add it
-            if (!project.classList.contains("inactive")) {
-                project.classList.toggle("inactive");
-            }
-            // if the inactives projects back is showing, hide it
-            if (!project.querySelector(".project-back").classList.contains("hidden")) {
-                project.querySelector(".project-back").classList.toggle("hidden");
-            }
-            // if the inactive projects face is hidden, show it
-            if (project.querySelector(".project-face").classList.contains("hidden")) {
-                project.querySelector(".project-face").classList.toggle("hidden");
-            }
+            project.classList.add("inactive");
+            project.querySelector(".project-back").classList.add("hidden");
+            project.querySelector(".project-face").classList.remove("hidden");
         }
     }
 }
 
 function projectItemInactive(item) {
-    // remove inactive class
-    for (const project of projects) {
-        if (project.classList.contains("inactive")) {
-            project.classList.toggle("inactive");
-        }
-    }
-    item.querySelector(".project-face").classList.toggle("hidden");
+    // remove inactive class from project item that was active
+    projects.forEach(item => item.classList.remove("inactive"));
+    // unhide the face
+    item.querySelector(".project-face").classList.remove("hidden");
     // unhide the back
-    item.querySelector(".project-back").classList.toggle("hidden");
+    item.querySelector(".project-back").classList.add("hidden");
 }
 
 // Desktop
-if (window.innerWidth > 500) {
+if (WINDOW_WIDTH > 500) {
     projects.forEach(item => {
         item.addEventListener("mouseover", () => { projectItemActive(item) });
         item.addEventListener("mouseout", () => { projectItemInactive(item) });
     });
+    projects.forEach(item => {
+        item.addEventListener("click", function() {
+            window.open(this.getAttribute("name"));
+        });
+    });
+
 }
 
 // Phones / Tablets
-if (window.innerWidth < 500) {
+if (WINDOW_WIDTH < 500) {
     const hamburgerInput = document.querySelector("#hamburger");
     const hamburgerItems = document.querySelector(".hamburger-items");
 
@@ -92,5 +89,3 @@ if (window.innerWidth < 500) {
         });
     });
 }
-
-
