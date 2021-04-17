@@ -8,7 +8,8 @@
 ::-moz-selection { background-color: var(--accent-color); }
 body::selection { background-color: var(--accent-color); }
 html, body, ul, li, a, h1, h2, h3, h4, h5, p { margin: 0; padding: 0; }
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; overflow-x: hidden; }
+p { line-height: 1.4em; }
 body { 
     background-color: #ffffff;
 background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='250' height='30' viewBox='0 0 1000 120'%3E%3Cg fill='none' stroke='%23ff0000' stroke-width='2' %3E%3Cpath d='M-500 75c0 0 125-30 250-30S0 75 0 75s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 45c0 0 125-30 250-30S0 45 0 45s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 105c0 0 125-30 250-30S0 105 0 105s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 15c0 0 125-30 250-30S0 15 0 15s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500-15c0 0 125-30 250-30S0-15 0-15s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 135c0 0 125-30 250-30S0 135 0 135s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3C/g%3E%3C/svg%3E");
@@ -57,6 +58,7 @@ nav li { display: inline-block; }
 nav div li { margin-right: .5em; }
 a {
     /*transition: color .5s ease;*/
+    width: 100%;
     color: var(--main-color);
 }
 nav-n-current a:hover { color: rgb(0, 0, 0, .5); }
@@ -70,8 +72,6 @@ header img {
 }
 #header-left-background {
     position: fixed;
-    border-top: .2em solid black;
-    transform: rotate(90deg); 
     position: absolute;
     top: 25vh;
     left: 10vh;
@@ -117,7 +117,6 @@ header img {
     from { bottom: 40; }
     to { bottom: 20; }
 }
-
 #im-a {
     padding: var(--normal-padding) 0 6em 0;
     background: white;
@@ -257,7 +256,7 @@ header img {
     position: relative;
     background: var(--secondary-accent-color);
     padding-bottom: var(--normal-padding);
-    padding: 6em 0;
+    padding: 3em 0;
     width: 100%;
 }
 #skills-progress { width: 75%; margin: 2em 0; }
@@ -273,7 +272,7 @@ header img {
     font-weight: 200;
 }
 #skills-bullet-container {
-    margin-top: var(--normal-padding);
+    margin: var(--normal-padding) 0;
     width: 75%;
 }
 /*Container behind the red in the progress*/
@@ -392,11 +391,6 @@ form button { width: 15%; margin: 0 auto; margin-top: .5em; background: white; }
     text-align: right;
 }
 .left { align-items: flex-start; text-align: left; }
-.first {
-    font-size: 2.5em;
-    padding-right: .3em;
-    float: left;
-}
 .hidden { display: none; }
 .hidden-opacity { opacity: 0; }
 
@@ -468,86 +462,6 @@ footer img:hover {
 }
 .skills-bullet { position: relative; }
 
-/*Media queries*/
-@media screen and (max-width: 500px) {
-    .temp-rectangle { margin: 2em 0; }
-    nav { height: auto; }
-    /*Hamburger*/
-    header label { display: inline-block; position: fixed; top: 0; font-size: 2em; padding-left: 1em; }
-    .hamburger-items {
-        padding-top: 2em;
-        width: 100%;
-        flex-direction: column;
-        align-items: center;
-    }
-    .hamburger-items > div {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    nav li, nav div li { width: 100%; text-align: center; }
-    nav { background: var(--main-color); color: white; padding: 1em 0; }
-    nav label { width: 100%; background: var(--main-color); }
-    /*In case something is changed here, hides overflow (scrollbar horizontally)*/
-    html,body { overflow-x: hidden; }
-    .content { width: 100%; }
-    .a-item {
-        flex-direction: column;
-    }
-    .a-item .item-content {
-        width: 90%;
-        align-items: center;
-        text-align: center;
-    }
-    .a-item:nth-child(even) { 
-        flex-direction: column-reverse;
-    }
-    #skills-bullet-container {
-        width: 100%;
-        flex-direction: column;
-        align-items: center;
-    }
-    .skills-bullet { margin: 2em; }
-    .even-skills {
-        right: -30;
-        left: auto;
-    }
-    .left-skills { left: -20; right: auto; }
-    .progress-container {  width: 75%; }
-    #skills-container { padding: 3em 0; }
-    .transition-arrow {
-        bottom: -60;
-        border-left: 100vw solid transparent;
-        border-right: 100vw solid transparent;
-    }
-    #projects-container {
-        text-align: center;
-        flex-direction: column;
-        height: auto; 
-        padding-top: 10em;
-    }
-    #projects {
-        flex-direction: column;
-        width: 100%;
-        margin-left: 0;
-    }
-    .project-item {
-        height: 30vh;
-        margin: 2em 0;
-        padding-top: 2em; padding-bottom: 2em;
-        width: 80%;
-    }
-    #contact-container {
-        flex-direction: column;
-    }
-    #contact-information { margin: 0; padding: 0; }
-    #contact-container form {
-        width: 90%;
-    }
-    #contact-container form button { width: 20%; }
-    #project-header { margin-bottom: 2em; }
-}
-
 
 .contact-valid { background: green; color: white; }
 .contact-invalid { background: red; color: white; box-shadow: 0em 0em .5em white; }
@@ -555,7 +469,7 @@ footer img:hover {
 
 .hover-over-me {
     position: absolute;
-    top: -45;
-    left: -65;
+    top: -40;
+    left: -70;
 }
 .hover-over-me-phone { top: -100; left: 0; transform: rotate(20deg); }
