@@ -8,6 +8,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./static/css/layout.css">
     <link rel="stylesheet" href="./static/css/index.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;900&display=swap" rel="stylesheet">
@@ -19,11 +20,11 @@
     <h1 id="header-left-background">Jesus</h1>
     <h1 id="header-right-background">Callejas</h1>
     -->
-    <header>
+    <header class="flex justify-center align-center">
         <nav class="hidden-opacity">
             <label for="hamburger">&#9776</label>
             <input id="hamburger" type="checkbox">
-            <ul class="hamburger-items">
+            <ul class="hamburger-items flex justify-around align-center">
                 <li id="logo">JC</li>
                 <div>
                     <li class="nav-current"><a href="#">Home</a></li>
@@ -66,9 +67,9 @@
             </div>
         </div>
     </section>
-    <section id="skills-container">
+    <section id="skills-container" class="flex flex-col align-center justify-around">
         <h2>Skills</h2>
-        <section id="skills-bullet-container">
+        <section id="skills-bullet-container" class="flex justify-around">
             <div class="skills-bullet">
                 <h3 class="skills-number">01</h3>
                 <h3>Relational Databases</h3>
@@ -99,7 +100,7 @@
         </section>
         <!--end of skills bullet section-->
         <!--start of skills progress section-->
-        <section id="skills-progress">
+        <section id="skills-progress" class="flex wrap justify-around">
             <div class="progress-container">
                 <h3 class="progress-title">Java</h3>
                 <div class="progress-percent"></div>
@@ -136,12 +137,12 @@
     <!--End of skills section-->
 
     <!--Project section-->
-    <section id="projects-container">
-        <div>
+    <section id="projects-container" class="flex justify-center align-center">
+        <div id="project-header">
             <h2>Projects</h2>
             <a href="/projects" target="_blank" style="color: red;">See more ></a>
         </div>
-        <div id="projects">
+        <div id="projects" class="flex justify-center align-center">
             <!--font used is satisfy-->
             <img src="./static/images/hover-over-me.svg" class="hover-over-me" height="100px" width="100px" draggable="false">
             <div class="project-item" name="https://www.github.com/somewhere">
@@ -212,23 +213,23 @@
     </section>
     <!--end of projects section-->
 
-    <section id="contact-container">
+    <section id="contact-container" class="flex align-center justify-center">
         <div id="contact-information">
             <h2> Get In Touch</h2>
             <div class="contact-item">
-                <img class="icons" src="./static/images/phone-icon.svg" height="20px" width="20px"> 
+                <img class="icons" src="./static/images/phone-icon.svg" height="25px" width="25px"> 
                 <p>123-123-1234</p>
             </div>
             <div class="contact-item">
-                <img class="icons" src="./static/images/email-icon.svg" height="20px" width="20px"> 
+                <img class="icons" src="./static/images/email-icon.svg" height="25px" width="25px"> 
                 <p>uremail@gmail.com</p>
             </div>
             <div class="contact-item">
-                <img class="icons" src="./static/images/location-icon.svg" height="20px" width="18px"> 
+                <img class="icons" src="./static/images/location-icon.svg" height="25px" width="18px"> 
                 <p>___, FL</p>
             </div>
         </div>
-        <form action="#" method="POST">
+        <form action="#" method="POST" class="flex flex-col justify-center">
             <div class="contact-input">
                 <label class="input-label" for="name">Name</label>
                 <input id="name" type="text" placeholder="">
@@ -244,8 +245,8 @@
             <button class="button">Send</button>
         </form>
     </section>
-    <footer>
-        <div id="footer-navigation">
+    <footer class="flex justify-around align-center">
+        <div id="footer-navigation" class="flex justify-around align-center"> 
             <h4>Jesus Callejas</h4>
             <ul>
                 <li><a href="#">Home</a></li>
@@ -255,16 +256,16 @@
                 <li><a href="#">Contact</a></li>
             </ul>
         </div>
-        <div id="footer-social-iconss">
+        <div id="footer-social-iconss" class="flex justify-around"> 
             <a href="#" target="_blank">
-                <img class="icons" src="./static/images/in-icon.svg" height="30px" width="30px">
+                <img class="icons" src="./static/images/in-icon.svg" height="25px" width="25px">
             </a>
             <a href="#" target="_blank">
-                <img class="icons" src="./static/images/github-icon.svg" height="30px" width="30px">
+                <img class="icons" src="./static/images/github-icon.svg" height="25px" width="25px">
             </a>
 
             <a href="#" target="_blank">
-                <img class="icons" src="./static/images/insta-icon.svg" height="30px" width="30px">
+                <img class="icons" src="./static/images/insta-icon.svg" height="25px" width="25px">
             </a>
         </div>
     </footer>

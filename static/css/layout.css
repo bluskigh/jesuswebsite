@@ -1,0 +1,13 @@
+.flex {
+    display: flex;
+}
+.flex-row { flex-direction: row; }
+.flex-col { flex-direction: column; }
+.align-center { align-items: center; }
+.justify-center { justify-content: center; }
+.justify-around { justify-content: space-around; }
+.justify-between { justify-content: space-between; }
+.justify-start { justify-content: flex-start; }
+.wrap { flex-wrap: wrap; }
+
+/*width: 75%, positon: relative*/

@@ -33,9 +33,6 @@ header {
     height: 100vh;
     min-height: 100vh;
     position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 nav {
     transition: .5s ease;
@@ -45,7 +42,7 @@ nav {
     position: fixed;
     top: 0;
 }
-.hamburger-items { width: 100%; display: flex; justify-content: space-around; align-items: center; height: 100%; transition: .5s ease; }
+.hamburger-items { width: 100%; height: 100%; transition: .5s ease; }
 .dark {
     background: var(--main-color);
     box-shadow: 0em .5em 1em var(--main-color);
@@ -118,7 +115,6 @@ header img {
 }
 @keyframes down-arrow {
     from { bottom: 40; }
-    100% { border-top: 1em solid var(--accent-color); }
     to { bottom: 20; }
 }
 
@@ -173,10 +169,6 @@ header img {
 /*Project section*/
 #projects-container {
     padding: 4em 0 3em 0;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
     width: 100%;
     height: 60vh;
     background-color: #ffffff;
@@ -188,9 +180,6 @@ header img {
     margin-left: 5em;
     height: 100%;
     width: 55%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 .project-item {
     z-index: 100;
@@ -269,12 +258,9 @@ header img {
     background: var(--secondary-accent-color);
     padding-bottom: var(--normal-padding);
     padding: 6em 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
     width: 100%;
 }
+#skills-progress { width: 75%; margin: 2em 0; }
 #skills-container h2 {
     color: white;
     font-size: 2.5em;
@@ -289,16 +275,6 @@ header img {
 #skills-bullet-container {
     margin-top: var(--normal-padding);
     width: 75%;
-    display: flex;
-    justify-content: space-around;
-}
-
-#skills-progress {
-    margin: 2em 0;
-    width: 75%;
-    display: flex;
-    flex-wrap : wrap;
-    justify-content: space-around;
 }
 /*Container behind the red in the progress*/
 .progress-container {
@@ -339,10 +315,6 @@ header img {
 }
 /*Contact section*/
 #contact-container {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
     /*background: linear-gradient(var(--accent-color), darkred);*/
     background: linear-gradient(red, darkred);
     color: white;
@@ -358,9 +330,6 @@ header img {
 }
 #contact-container form {
     height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     width: 30%;
 }
 input {
@@ -415,16 +384,6 @@ form button { width: 15%; margin: 0 auto; margin-top: .5em; background: white; }
     color: black;
     margin-bottom: 2em;
 }
-.contact-side-item {
-    display: flex;
-    align-items: center;
-}
-.contact-side-item img {
-    margin-right: .5em;
-}
-.contact-side-item:nth-child(2) {
-    margin: 1em 0 ; 
-}
 
 /*Other*/
 .temp-rectangle { width: 30%; height: 200px; background: gray; box-shadow: 0em 1em 1em black; transition: .5s ease; }
@@ -462,17 +421,11 @@ footer {
     background: var(--main-color);
     width: 100%;
     padding: 3em 0;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
     color: white;
 }
 footer ul { list-style: none; }
 footer ul a { color: white; }
 #footer-navigation {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
     position: relative;
     height: 100%;
     width: 15%;
@@ -480,13 +433,11 @@ footer ul a { color: white; }
 #footer-navigation ul { border-left: 1px solid white; margin: .5em; padding-left: .25em; }
 .social-icon { height: 30px; width: 30px; border-radius: 50%; background: gray; margin: 0; padding: 0; }
 #footer-social-icons {
-    display: flex;
-    justify-content: space-around;
     height: 100%;
     width: 10%;
     margin: 0; padding: 0;
 }
-footer img { transition: .343s ease; }
+footer img { transition: .343s ease; margin: 0 .5em; }
 footer a:focus { outline: none; }
 footer img:hover {
     filter: invert(50%);
@@ -562,8 +513,7 @@ footer img:hover {
         left: auto;
     }
     .left-skills { left: -20; right: auto; }
-    #skills-progress { flex-direction: column; width: 90%; align-items: center; }
-    .progress-container { width: 75%; }
+    .progress-container {  width: 75%; }
     #skills-container { padding: 3em 0; }
     .transition-arrow {
         bottom: -60;
@@ -590,11 +540,12 @@ footer img:hover {
     #contact-container {
         flex-direction: column;
     }
-    #contact-information { margin: 0; padding; 0; }
+    #contact-information { margin: 0; padding: 0; }
     #contact-container form {
         width: 90%;
     }
     #contact-container form button { width: 20%; }
+    #project-header { margin-bottom: 2em; }
 }
 
 
