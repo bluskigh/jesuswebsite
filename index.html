@@ -30,7 +30,7 @@
                     <li class="nav-n-current"><a href="#">About</a></li>
                     <li class="nav-n-current"><a href="#">Projects</a></li>
                     <li class="nav-n-current"><a href="#"><i>Resume</i></a></li>
-                    <li class="nav-n-current button red-button"><a href="#contact-container">Contact</a></li>
+                    <li class="button red-button"><a href="#contact-container">Contact</a></li>
                 </div>
             </ul>
         </nav>
@@ -143,7 +143,7 @@
         </div>
         <div id="projects">
             <div class="project-item">
-                <div class="project-number"><h3>01</h3></div>
+                <div class="project-number left-skills"><h3>01</h3></div>
                 <div class="project-face">
                     <h3>Store App</h3>
                     <div class="project-languages">
@@ -185,7 +185,7 @@
                 </div>
             </div>
             <div class="project-item">
-                <div class="project-number"><h3>03</h3></div>
+                <div class="project-number left-skills"><h3>03</h3></div>
                 <div class="project-face">
                     <h3>All Pomodoro</h3>
                     <div class="project-languages">
@@ -218,15 +218,15 @@
         </div>
         <form action="#" method="POST">
             <div class="contact-input">
-                <label for="name">Name</label>
+                <label class="input-label" for="name">Name</label>
                 <input id="name" type="text" placeholder="">
             </div>
             <div class="contact-input">
-                <label for="email">Email</label>
+                <label class="input-label" for="email">Email</label>
                 <input id="email" type="text" placeholder="">
             </div>
             <div id="contact-input-textarea" class="contact-input">
-                <label for="message">Message</label>
+                <label class="textarea-label input-label" for="message">Message</label>
                 <textarea id="message" row="20" column="20" placeholder=""></textarea>
             </div>
             <button class="button">Send</button>
@@ -250,5 +250,6 @@
         </div>
     </footer>
     <script src="./static/js/index.js"></script>
+    <script src="./static/js/contact.js"></script>
 </body>
 </html>
