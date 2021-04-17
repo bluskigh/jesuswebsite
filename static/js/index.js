@@ -4,8 +4,7 @@ setTimeout(() => {
 }, 500);
 setTimeout(() => {
     document.querySelector("#header-information").classList.remove("hidden-opacity");
-}, 700)
-
+}, 800)
 
 const WINDOW_WIDTH = window.innerWidth;
 

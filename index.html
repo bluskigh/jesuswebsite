@@ -7,27 +7,36 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--remove once Cache-Control is set in actual headers, php for you I think.-->
+    <meta http-equiv="cache-control" content="max-age=288000"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--stylesheets-->
     <link rel="stylesheet" href="./static/css/layout.css">
     <link rel="stylesheet" href="./static/css/index.css">
+    <link rel="stylesheet" href="./static/css/media.css">
+
+    <!--font-->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;900&display=swap" rel="stylesheet">
+
     <title>Home | Jesus Callejas</title>
 </head>
 <body>
-
-    <!--
-    <h1 id="header-left-background">Jesus</h1>
-    <h1 id="header-right-background">Callejas</h1>
-    -->
+    <h1 id="header-left-background">&lt;</h1>
+    <h1 id="header-right-background">/&gt;</h1>
     <header class="flex justify-center align-center">
         <nav class="hidden-opacity">
-            <label for="hamburger">&#9776</label>
+            <!--Can change label text to whatever you want, will be used as the checkbox.-->
+            <label for="hamburger" style="box-shadow: 0em 0em 1em var(--main-color);">&#9776</label>
+            <!--checkbox is hidden, used in correlation with label to detect when the label was clicked-->
             <input id="hamburger" type="checkbox">
             <ul class="hamburger-items flex justify-around align-center">
                 <li id="logo">JC</li>
                 <div>
+                    <!--nav current will contain the border bottom-->
                     <li class="nav-current"><a href="#">Home</a></li>
+                    <!--do not contian border bottom-->
                     <li class="nav-n-current"><a href="#">About</a></li>
                     <li class="nav-n-current"><a href="#">Projects</a></li>
                     <li class="nav-n-current"><a href="#"><i>Resume</i></a></li>
@@ -39,6 +48,7 @@
             <h1>Hi I'm, <br> Jesus Callejas</h1>
             <p>Software Developer // Full Stack Developer</p>
         </div>
+        <!--bouncing arrow you see when page is loaded-->
         <div class="down-arrow"></div>
     </header>
     <section id="im-a">
@@ -67,8 +77,12 @@
             </div>
         </div>
     </section>
+    <!-- end of "im a" container-->
+
+    <!--Start of skills container-->
     <section id="skills-container" class="flex flex-col align-center justify-around">
         <h2>Skills</h2>
+        <!--bullets container-->
         <section id="skills-bullet-container" class="flex justify-around">
             <div class="skills-bullet">
                 <h3 class="skills-number">01</h3>
@@ -99,6 +113,7 @@
             </div>
         </section>
         <!--end of skills bullet section-->
+
         <!--start of skills progress section-->
         <section id="skills-progress" class="flex wrap justify-around">
             <div class="progress-container">
@@ -213,6 +228,7 @@
     </section>
     <!--end of projects section-->
 
+    <!--Start of contact section-->
     <section id="contact-container" class="flex align-center justify-center">
         <div id="contact-information">
             <h2> Get In Touch</h2>
@@ -245,6 +261,9 @@
             <button class="button">Send</button>
         </form>
     </section>
+    <!--end of contact section-->
+
+    <!--start of footer section-->
     <footer class="flex justify-around align-center">
         <div id="footer-navigation" class="flex justify-around align-center"> 
             <h4>Jesus Callejas</h4>
@@ -269,6 +288,9 @@
             </a>
         </div>
     </footer>
+    <!--start of footer section-->
+
+    <!--scripts-->
     <script src="./static/js/index.js"></script>
     <script src="./static/js/contact.js"></script>
 </body>
