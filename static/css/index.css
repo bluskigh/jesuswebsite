@@ -8,11 +8,16 @@
 ::-moz-selection { background-color: var(--accent-color); }
 body::selection { background-color: var(--accent-color); }
 html, body, ul, li, a, h1, h2, h3, h4, h5, p { margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
 body { 
-background-color: #ffffff;
-background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1600 900'%3E%3Cdefs%3E%3ClinearGradient id='a' x1='0' x2='0' y1='1' y2='0' gradientTransform='rotate(22,0.5,0.5)'%3E%3Cstop offset='0' stop-color='%23ff0000'/%3E%3Cstop offset='1' stop-color='%237e0000'/%3E%3C/linearGradient%3E%3ClinearGradient id='b' x1='0' x2='0' y1='0' y2='1' gradientTransform='rotate(0,0.5,0.5)'%3E%3Cstop offset='0' stop-color='%23000000'/%3E%3Cstop offset='1' stop-color='%23000000'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cg fill='%23FFF' fill-opacity='0' stroke-miterlimit='10'%3E%3Cg stroke='url(%23a)' stroke-width='3.3'%3E%3Cpath transform='translate(-94.5 7.600000000000001) rotate(1 1409 581) scale(0.9657000000000001)' d='M1409 581 1450.35 511 1490 581z'/%3E%3Ccircle stroke-width='1.1' transform='translate(-106.5 69) rotate(8.2 800 450) scale(1.009736)' cx='500' cy='100' r='40'/%3E%3Cpath transform='translate(22.1 -94.5) rotate(69.5 401 736) scale(1.009736)' d='M400.86 735.5h-83.73c0-23.12 18.74-41.87 41.87-41.87S400.86 712.38 400.86 735.5z'/%3E%3C/g%3E%3Cg stroke='url(%23b)' stroke-width='1'%3E%3Cpath transform='translate(414 -2.6000000000000014) rotate(0.6500000000000004 150 345) scale(0.9798999999999999)' d='M149.8 345.2 118.4 389.8 149.8 434.4 181.2 389.8z'/%3E%3Crect stroke-width='2.2' transform='translate(-138.5 -185) rotate(68.4 1089 759)' x='1039' y='709' width='100' height='100'/%3E%3Cpath transform='translate(-274 78) rotate(11.399999999999999 1400 132) scale(0.875)' d='M1426.8 132.4 1405.7 168.8 1363.7 168.8 1342.7 132.4 1363.7 96 1405.7 96z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    background-color: #ffffff;
+background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='250' height='30' viewBox='0 0 1000 120'%3E%3Cg fill='none' stroke='%23ff0000' stroke-width='2' %3E%3Cpath d='M-500 75c0 0 125-30 250-30S0 75 0 75s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 45c0 0 125-30 250-30S0 45 0 45s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 105c0 0 125-30 250-30S0 105 0 105s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 15c0 0 125-30 250-30S0 15 0 15s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500-15c0 0 125-30 250-30S0-15 0-15s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 135c0 0 125-30 250-30S0 135 0 135s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3C/g%3E%3C/svg%3E");
+
+/*
+    background-color: #ffffff;
+background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 800 800'%3E%3Cg fill='none' stroke='%23ff0000' stroke-width='1'%3E%3Cpath d='M769 229L1037 260.9M927 880L731 737 520 660 309 538 40 599 295 764 126.5 879.5 40 599-197 493 102 382-31 229 126.5 79.5-69-63'/%3E%3Cpath d='M-31 229L237 261 390 382 603 493 308.5 537.5 101.5 381.5M370 905L295 764'/%3E%3Cpath d='M520 660L578 842 731 737 840 599 603 493 520 660 295 764 309 538 390 382 539 269 769 229 577.5 41.5 370 105 295 -36 126.5 79.5 237 261 102 382 40 599 -69 737 127 880'/%3E%3Cpath d='M520-140L578.5 42.5 731-63M603 493L539 269 237 261 370 105M902 382L539 269M390 382L102 382'/%3E%3Cpath d='M-222 42L126.5 79.5 370 105 539 269 577.5 41.5 927 80 769 229 902 382 603 493 731 737M295-36L577.5 41.5M578 842L295 764M40-201L127 80M102 382L-261 269'/%3E%3C/g%3E%3Cg fill='%231f0000'%3E%3Ccircle cx='769' cy='229' r='5'/%3E%3Ccircle cx='539' cy='269' r='5'/%3E%3Ccircle cx='603' cy='493' r='5'/%3E%3Ccircle cx='731' cy='737' r='5'/%3E%3Ccircle cx='520' cy='660' r='5'/%3E%3Ccircle cx='309' cy='538' r='5'/%3E%3Ccircle cx='295' cy='764' r='5'/%3E%3Ccircle cx='40' cy='599' r='5'/%3E%3Ccircle cx='102' cy='382' r='5'/%3E%3Ccircle cx='127' cy='80' r='5'/%3E%3Ccircle cx='370' cy='105' r='5'/%3E%3Ccircle cx='578' cy='42' r='5'/%3E%3Ccircle cx='237' cy='261' r='5'/%3E%3Ccircle cx='390' cy='382' r='5'/%3E%3C/g%3E%3C/svg%3E");
+*/
 background-attachment: fixed;
-background-size: cover;
 /* background by SVGBackgrounds.com */
 color: var(--main-color); }
 h1, h2, h3, h4, h5, h6, p, li, label { font-family: 'Roboto', sans-serif; }
@@ -49,19 +54,13 @@ nav {
     color: white;
 }
 .dark li a:hover {color: rgb(255, 255, 255, .5);}
-nav li {
-    display: inline-block;
-}
-nav div li {
-    margin-right: .5em;
-}
-nav div li a {
+nav li { display: inline-block; }
+nav div li { margin-right: .5em; }
+a {
     /*transition: color .5s ease;*/
     color: var(--main-color);
 }
-nav-n-current a:hover {
-    color: rgb(0, 0, 0, .5);
-}
+nav-n-current a:hover { color: rgb(0, 0, 0, .5); }
 #header-information { text-align: center; }
 header label, header #hamburger { display: none; }
 #logo { user-select: none; -moz-user-select: none; -ms-user-select: none;  font-size: 1.5em;}
@@ -109,17 +108,17 @@ header img {
     position: absolute;
     bottom: 40;
     animation-name: down-arrow;
-    animation-duration: 1s;
+    animation-duration: .8s;
     animation-iteration-count: infinite;
     /*Gives affect of bouncing, without this animation will look harsh*/
     animation-direction: alternate;
-    animation-timing-function: ease-in;
+    animation-timing-function: ease-in-out;
 }
 @keyframes down-arrow {
     from { bottom: 40; }
+    100% { border-top: 1em solid var(--accent-color); }
     to { bottom: 20; }
 }
-
 
 #im-a {
     padding: var(--normal-padding) 0 6em 0;
@@ -140,7 +139,7 @@ header img {
 .and-ima {
     position: absolute;
     opacity: .5;
-    top: 48%;
+    top: 45%;
     left: 50%;
     transform: transform(-50%, -48%);
 }
@@ -178,7 +177,8 @@ header img {
     align-items: center;
     width: 100%;
     height: 60vh;
-    background: white;
+    background-color: #ffffff;
+    background-attachment: fixed;
 }
 #projects {
     margin-left: 5em;
@@ -240,9 +240,8 @@ header img {
 .project-languages {
     text-align: center;
 }
-.project-languages button {
-    color: white;
-}
+.project-languages button { color: white; }
+.project-languages p { display: inline-block; }
 .inactive {
     z-index: 0;
     background: black;
@@ -265,7 +264,7 @@ header img {
     position: relative;
     background: var(--secondary-accent-color);
     padding-bottom: var(--normal-padding);
-    padding-top: 2em;
+    padding: 6em 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -284,22 +283,26 @@ header img {
     font-weight: 200;
 }
 #skills-bullet-container {
+    margin-top: var(--normal-padding);
     width: 75%;
     display: flex;
     justify-content: space-around;
 }
 
 #skills-progress {
-    width: 75%;
+    margin: 2em 0;
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
     justify-content: space-around;
 }
 .progress-container {
-    margin: .5em 0;
+    margin: 1em 0;
     background: var(--main-color);
     height: 1em;
-    width: 35%;
+    width: 60%;
     position: relative;
 }
 .progress-percent {
@@ -329,7 +332,7 @@ header img {
     border-right: 20vw solid transparent;
     border-top: 100px solid var(--secondary-accent-color);
     position: absolute;
-    bottom: -40;
+    bottom: -60;
 }
 /*Contact section*/
 #contact-container {
@@ -436,10 +439,12 @@ form button { width: 15%; margin: 0 auto; margin-top: .5em; background: white; }
     padding: .3em 1em;
     transition: transform .5s ease;
 }
-.button:hover { cursor: pointer; transform: translateY(-3px); }
+a.button:hover { cursor: pointer; transform: translateY(-3px); border-bottom: none; }
+/*Hate to do this, but no other way*/
+li.button a { color: white; }
 .red-button {
     background: var(--accent-color);
-    color: var(--secondary-color);
+    color: white;
 }
 
 /*Footer section*/
@@ -529,6 +534,7 @@ footer ul a { color: white; }
         flex-direction: column-reverse;
     }
     #skills-bullet-container {
+        width: 100%;
         flex-direction: column;
         align-items: center;
     }
@@ -550,6 +556,7 @@ footer ul a { color: white; }
     #projects {
         flex-direction: column;
         width: 100%;
+        margin-left: 0;
     }
     .project-item {
         margin: 2em 0;
