@@ -63,7 +63,7 @@ a {
     color: var(--main-color);
 }
 nav-n-current a:hover { color: rgb(0, 0, 0, .5); }
-#header-information { text-align: center; }
+#header-information { text-align: center;  transition: .5s ease; }
 header label, header #hamburger { display: none; }
 #logo { user-select: none; -moz-user-select: none; -ms-user-select: none;  font-size: 1.5em;}
 #logo:hover { cursor: default; }
@@ -181,8 +181,10 @@ header img {
     height: 60vh;
     background-color: #ffffff;
     background-attachment: fixed;
+    margin-bottom: 2em;
 }
 #projects {
+    position: relative;
     margin-left: 5em;
     height: 100%;
     width: 55%;
@@ -348,6 +350,9 @@ header img {
     text-align: center;
     width: 100%;
 }
+.contact-item { display: flex; align-items: center; justify-content: center; margin: 1em 0; }
+.contact-item img { margin-right: .5em; }
+.icons { filter: invert(100%); }
 #contact-information {
     margin-right: 3em;
 }
@@ -434,6 +439,7 @@ form button { width: 15%; margin: 0 auto; margin-top: .5em; background: white; }
     float: left;
 }
 .hidden { display: none; }
+.hidden-opacity { opacity: 0; }
 
 /*Buttons*/
 .button {
@@ -479,6 +485,12 @@ footer ul a { color: white; }
     height: 100%;
     width: 10%;
     margin: 0; padding: 0;
+}
+footer img { transition: .343s ease; }
+footer a:focus { outline: none; }
+footer img:hover {
+    filter: invert(50%);
+    transform: translateY(-3px);
 }
 
 
@@ -589,3 +601,10 @@ footer ul a { color: white; }
 .contact-valid { background: green; color: white; }
 .contact-invalid { background: red; color: white; box-shadow: 0em 0em .5em white; }
 
+
+.hover-over-me {
+    position: absolute;
+    top: -45;
+    left: -65;
+}
+.hover-over-me-phone { top: -100; left: 0; transform: rotate(20deg); }

@@ -20,7 +20,7 @@
     <h1 id="header-right-background">Callejas</h1>
     -->
     <header>
-        <nav>
+        <nav class="hidden-opacity">
             <label for="hamburger">&#9776</label>
             <input id="hamburger" type="checkbox">
             <ul class="hamburger-items">
@@ -34,7 +34,7 @@
                 </div>
             </ul>
         </nav>
-        <div id="header-information">
+        <div id="header-information" class="hidden-opacity">
             <h1>Hi I'm, <br> Jesus Callejas</h1>
             <p>Software Developer // Full Stack Developer</p>
         </div>
@@ -142,6 +142,8 @@
             <a href="/projects" target="_blank" style="color: red;">See more ></a>
         </div>
         <div id="projects">
+            <!--font used is satisfy-->
+            <img src="./static/images/hover-over-me.svg" class="hover-over-me" height="100px" width="100px" draggable="false">
             <div class="project-item" name="https://www.github.com/somewhere">
                 <div class="project-number left-skills"><h3>01</h3></div>
                 <div class="project-face">
@@ -212,10 +214,19 @@
 
     <section id="contact-container">
         <div id="contact-information">
-            <h2>Get In Touch</h2>
-            <p>123-123-1234</p>
-            <p>uremail@gmail.com</p>
-            <p>___, FL</p>
+            <h2> Get In Touch</h2>
+            <div class="contact-item">
+                <img class="icons" src="./static/images/phone-icon.svg" height="20px" width="20px"> 
+                <p>123-123-1234</p>
+            </div>
+            <div class="contact-item">
+                <img class="icons" src="./static/images/email-icon.svg" height="20px" width="20px"> 
+                <p>uremail@gmail.com</p>
+            </div>
+            <div class="contact-item">
+                <img class="icons" src="./static/images/location-icon.svg" height="20px" width="18px"> 
+                <p>___, FL</p>
+            </div>
         </div>
         <form action="#" method="POST">
             <div class="contact-input">
@@ -244,10 +255,17 @@
                 <li><a href="#">Contact</a></li>
             </ul>
         </div>
-        <div id="footer-social-icons">
-            <div class="social-icon"></div>
-            <div class="social-icon"></div>
-            <div class="social-icon"></div>
+        <div id="footer-social-iconss">
+            <a href="#" target="_blank">
+                <img class="icons" src="./static/images/in-icon.svg" height="30px" width="30px">
+            </a>
+            <a href="#" target="_blank">
+                <img class="icons" src="./static/images/github-icon.svg" height="30px" width="30px">
+            </a>
+
+            <a href="#" target="_blank">
+                <img class="icons" src="./static/images/insta-icon.svg" height="30px" width="30px">
+            </a>
         </div>
     </footer>
     <script src="./static/js/index.js"></script>

@@ -1,3 +1,12 @@
+// on load of the page, wait .5s and fade the nav into existence
+setTimeout(() => {
+    document.querySelector("nav").classList.remove("hidden-opacity");
+}, 500);
+setTimeout(() => {
+    document.querySelector("#header-information").classList.remove("hidden-opacity");
+}, 700)
+
+
 const WINDOW_WIDTH = window.innerWidth;
 
 // Universal (changes backgorund color of the header once passed the header section (Hi I'm Jesus Callejas section)
@@ -88,4 +97,9 @@ if (WINDOW_WIDTH < 500) {
             projectItemActive(this);
         });
     });
+
+    const hoverme = document.querySelector(".hover-over-me");
+    // changin "hover over me" image to "click me" image
+    hoverme.setAttribute("src", "./static/images/click-me.svg");
+    hoverme.classList.toggle("hover-over-me-phone");
 }
