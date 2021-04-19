@@ -3,8 +3,9 @@
 }
 .flex-row { flex-direction: row; }
 .flex-col { flex-direction: column; }
-.align-center { align-items: center; }
-.align-end { align-items: flex-end; }
+.align-center { align-items: center !important; }
+.align-end { align-items: flex-end !important; }
+.align-start { align-items: flex-start !important; }
 .justify-center { justify-content: center; }
 .justify-around { justify-content: space-around; }
 .justify-between { justify-content: space-between; }

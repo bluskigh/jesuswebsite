@@ -14,8 +14,8 @@
     <title>Resume | Jesus Callejas</title>
 </head>
 <body>
-    <section id="resume-container">
-        <section id="resume-section">
+    <section id="resume-container-background">
+        <section id="resume-container">
             <section id="resume-general-info" class="flex flex-col align-center justify-around">
                 <section id="header">
                     <h2>Jesus Callejas</h2>
@@ -43,6 +43,38 @@
             
             <hr>
 
+            <section class="resume-section">
+                <div>
+                    <h3>Sample template</h3>
+                </div>
+                <div class="information-column">
+                    <p>Information here:</p>
+                    <p>Everything is created using flexbox, just like the homepage. Fonts are used from the homepage. Did not include the navbar in this section though. Footer is at the bottom, for redirection to homepage. Or visitor can click on the website link above. </p>
+                </div>
+            </section>
+
+            <section class="resume-section">
+                <div class="left-child">
+                    <hr class="split-hr">
+                    <h3>Options</h3>
+                </div>
+                <div class="right-child information-column">
+                    <hr class="split-hr">
+                    <p>You can include <strong class="strong">hr</strong> tag in the left and right child sections of the whole section, to give the effect from the template resume you gave me.</p>
+                    <br>
+                    <p>Left child div needs to contain the <strong class="strong">left-child</strong> class. In this case the div that contains <strong class="strong">"Options"</strong> text will have to have a class of <strong class="strong">left-child</strong></p>
+                    <br>
+                    <p><strong class="strong">br</strong> tag customized to provide minimal space.</p>
+                    <br>
+                    <p>By default the items are aligned in the center. This can be changed by adding the class <strong class="strong">align-end | start | center</strong>, adding this class to the container itself should work. So, <strong class="strong">&lt;div class="align-end ..."&gt;</strong> should align to the right. If used outside of <strong class="strong">information-column</strong> make sure that the container has a flex-direction of column.</p>
+                    <br>
+                    <p>Creating a new section is requires one class, define a new <strong class="strong">&lt;section class="resume-section"&gt;</strong> that has two children divs (left child, and right child) -&gt; <strong class="strong">&lt;div class="...&gt;</strong>(same thing for right child, but right child will most likely have the added class of <strong class="strong">information-column</strong></p>
+                    <strong>It's kind of confusing, but add left-child class to left child if you want to give effect of split horizontal line, otherwise no need to have left-child class on the left child div</strong>
+                </div>
+            </section>
+
+            <hr>
+
             <section id="overview-container" class="resume-section">
                 <div>
                     <h3>Overview</h3>
@@ -63,8 +95,7 @@
                    <div class="experience-item">
                         <h4 class="light">Startup Name, 1234 Startup Address</h4>
                         <p><strong class="strong">Software Developer</strong> (2020-Present)</p>
-                        <br>
-                        <p>Brief summary of responsibility at the job, “In charge of developing al gorithms to track what customers like, generating <strong class="strong">100k</strong> in revenue for company”. </p>
+                        <p class="experience-summary">Brief summary of responsibility at the job, “In charge of developing al gorithms to track what customers like, generating <strong class="strong">100k</strong> in revenue for company”. </p>
                         <ul>
                             <h2></h2>
                             <li>Accomplishments in this list</li>
@@ -76,8 +107,7 @@
                     <div class="experience-item">
                         <h4 class="light">Startup Name, 1234 Startup Address</h4>
                         <p><strong class="strong">Software Developer</strong> (2020-Present)</p>
-                        <br>
-                        <p>Brief summary of responsibility at the job, “In charge of developing al gorithms to track what customers like, generating <strong class="strong">100k</strong> in revenue for company”. </p>
+                        <p class="experience-summary">Brief summary of responsibility at the job, “In charge of developing al gorithms to track what customers like, generating <strong class="strong">100k</strong> in revenue for company”. </p>
                         <ul>
                             <h2></h2>
                             <li>Accomplishments in this list</li>
@@ -89,8 +119,7 @@
                     <div class="experience-item">
                         <h4 class="light">Startup Name, 1234 Startup Address</h4>
                         <p><strong class="strong">Software Developer</strong> (2020-Present)</p>
-                        <br>
-                        <p>Brief summary of responsibility at the job, “In charge of developing al gorithms to track what customers like, generating <strong class="strong">100k</strong> in revenue for company”. </p>
+                        <p class="experience-summary">Brief summary of responsibility at the job, “In charge of developing al gorithms to track what customers like, generating <strong class="strong">100k</strong> in revenue for company”. </p>
                         <ul>
                             <h2></h2>
                             <li>Accomplishments in this list</li>
