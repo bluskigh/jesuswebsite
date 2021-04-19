@@ -44,7 +44,7 @@
             <hr>
 
             <section class="resume-section">
-                <div>
+                <div class="section-information">
                     <h3>Sample template</h3>
                 </div>
                 <div class="information-column">
@@ -54,7 +54,7 @@
             </section>
 
             <section class="resume-section">
-                <div class="left-child">
+                <div class="left-child section-information">
                     <hr class="split-hr">
                     <h3>Options</h3>
                 </div>
@@ -70,13 +70,17 @@
                     <br>
                     <p>Creating a new section is requires one class, define a new <strong class="strong">&lt;section class="resume-section"&gt;</strong> that has two children divs (left child, and right child) -&gt; <strong class="strong">&lt;div class="...&gt;</strong>(same thing for right child, but right child will most likely have the added class of <strong class="strong">information-column</strong></p>
                     <strong>It's kind of confusing, but add left-child class to left child if you want to give effect of split horizontal line, otherwise no need to have left-child class on the left child div</strong>
+                    <br>
+                    <p>left chid needs to contain "left-child" class, and right-child needs to contain "right-child" class</p>
+                    <br>
+                    <p>Left child also needs to contain the class "section-information"</p>
                 </div>
             </section>
 
             <hr>
 
             <section id="overview-container" class="resume-section">
-                <div>
+                <div class="section-information">
                     <h3>Overview</h3>
                 </div>
                 <div id="overview-information" class="information-column">
@@ -88,7 +92,7 @@
             <hr>
 
             <section id="experience-container" class="resume-section">
-                <div>
+                <div class="section-information">
                     <h3>Related Experience</h3>
                 </div>
                 <div id="experience-information" class="information-column">
@@ -103,7 +107,7 @@
                             <li>Developed software that resulted in <strong class="strong">20%</strong> increase of user experience.</li>
                         </ul>
                     </div>
-                    <hr>
+                    <hr class="small-hr">
                     <div class="experience-item">
                         <h4 class="light">Startup Name, 1234 Startup Address</h4>
                         <p><strong class="strong">Software Developer</strong> (2020-Present)</p>
@@ -115,7 +119,7 @@
                             <li>Developed software that resulted in <strong class="strong">20%</strong> increase of user experience.</li>
                         </ul>
                     </div>
-                    <hr>
+                    <hr class="small-hr">
                     <div class="experience-item">
                         <h4 class="light">Startup Name, 1234 Startup Address</h4>
                         <p><strong class="strong">Software Developer</strong> (2020-Present)</p>
@@ -133,27 +137,40 @@
             <hr>
 
             <section id="qualifications-container" class="resume-section">
-                <h3>Qualifications</h3>
+                <div class="section-information">
+                    <h3>Qualifications</h3>
+                </div>
                 <div id="qualifications-information">
                     <div class="progress-container">
-                        <h4 class="progress-title">Java</h4>
-                        <div class="progress-percent"></div>
-                        <p class="progress-percentage">80%</p>
+                        <strong>Java</strong>
+                        <div class="progress-percent-background">
+                            <div class="progress-percent"></div>
+                        </div>
+                        <p>80%</p>
                     </div>
+
                     <div class="progress-container">
-                        <h4 class="progress-title">Java</h4>
-                        <div class="progress-percent"></div>
-                        <p class="progress-percentage">80%</p>
+                        <strong>Java</strong>
+                        <div class="progress-percent-background">
+                            <div class="progress-percent"></div>
+                        </div>
+                        <p>80%</p>
                     </div>
+
                     <div class="progress-container">
-                        <h4 class="progress-title">Java</h4>
-                        <div class="progress-percent"></div>
-                        <p class="progress-percentage">80%</p>
+                        <strong>Java</strong>
+                        <div class="progress-percent-background">
+                            <div class="progress-percent"></div>
+                        </div>
+                        <p>80%</p>
                     </div>
+
                     <div class="progress-container">
-                        <h4 class="progress-title">Java</h4>
-                        <div class="progress-percent"></div>
-                        <p class="progress-percentage">80%</p>
+                        <strong>Java</strong>
+                        <div class="progress-percent-background">
+                            <div class="progress-percent"></div>
+                        </div>
+                        <p>80%</p>
                     </div>
                 </div>
             </section>

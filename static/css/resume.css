@@ -3,10 +3,7 @@ a { color: black; }
 a:hover { color: var(--accent-color); }
 /*Background, width 100%, allows to add background image / color in the future*/
 #resume-container-background {
-    background-color: lightgrey;
-    /*
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='250' height='30' viewBox='0 0 1000 120'%3E%3Cg fill='none' stroke='%23ff0000' stroke-width='2' %3E%3Cpath d='M-500 75c0 0 125-30 250-30S0 75 0 75s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 45c0 0 125-30 250-30S0 45 0 45s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 105c0 0 125-30 250-30S0 105 0 105s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 15c0 0 125-30 250-30S0 15 0 15s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500-15c0 0 125-30 250-30S0-15 0-15s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 135c0 0 125-30 250-30S0 135 0 135s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3C/g%3E%3C/svg%3E");
-    */
     background-attachment: fixed;
 
     width: 100%;
@@ -57,31 +54,32 @@ a:hover { color: var(--accent-color); }
     flex-wrap: wrap;
 }
 
-/*This code is copied from the index.css, you can create a separate file and place this in that file if you want to.*/
 .progress-container {
-    margin: 1em 0;
-    background: var(--main-color);
-    height: .7em;
-    width: 40%;
+    margin: .5em 1em;
+    width: 30%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    flex-grow: 1;
+}
+.progress-container strong {
+    padding-right: .5em;
+}
+.progress-container p {
+    padding-left: .5em;
+}
+.progress-percent-background {
     position: relative;
+    width: 100%;
+    height: .7em;
+    background: var(--main-color);
 }
 .progress-percent {
+    position: absolute;
     height: 100%;
-    /*Percent put here*/
     width: 80%;
-    background: linear-gradient(to left, red, darkred);
-}
-.progress-percentage {
-    position: absolute;
-    right: -35;
-    top: 50%;
-    transform: translateY(-50%);
-}
-.progress-title {
-    position: absolute;
-    top: -18;
-    left: 0;
-    color: black;
+    background: red;
 }
 
 /*Containers*/
@@ -105,15 +103,48 @@ a:hover { color: var(--accent-color); }
 .right-child {}
 br { margin: .5em 0; }
 
-
 hr {
-    width: 100%;
     border: 0;
     height: 1px;
     background: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
-    margin: 1.5em  0;
+    width: 90%;
+    margin: 1.5em  auto;
 }
 
 .split-hr { background: black; }
 .light { font-weight: 200; }
 .strong { font-weight: 900; }
+
+/*****Media*****/
+@media screen and (max-width: 500px) {
+    .section-information { padding-bottom: 1em; }
+    #resume-container-background {
+    }
+    #resume-container {
+        width: 100%;
+        margin: 0;
+        padding: 1em 0;
+    }
+    .left-child { width: 100%; text-align: center;  }
+    .left-child hr { background: linear-gradient(to right, rgba(0,0,0,0), rgba(0, 0, 0, .75), rgba(0, 0, 0, 0)); height: 1px; margin: 1.5em 0; }
+    .small-hr { width: 25%; background: black; }
+    .right-child hr { display: none; }
+    #general-icons-container {
+        flex-direction: column;
+    }
+    #general-icons-container div {
+        margin: .5em 0;
+    }
+    .resume-section {
+        flex-direction: column;
+        align-items: center;
+    }
+    .information-column {
+        width: 100%;
+    }
+    #qualifications-information {
+        width: 100%; 
+        align-items: center;
+    }
+    .progress-container { width: 50%; }
+}
