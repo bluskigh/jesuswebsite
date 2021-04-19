@@ -1,0 +1,112 @@
+body, html { height: 100%; }
+a { color: black; }
+/*Background, width 100%, allows to add background image / color in the future*/
+#resume-container {
+    background-color: lightgrey;
+    /*
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='250' height='30' viewBox='0 0 1000 120'%3E%3Cg fill='none' stroke='%23ff0000' stroke-width='2' %3E%3Cpath d='M-500 75c0 0 125-30 250-30S0 75 0 75s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 45c0 0 125-30 250-30S0 45 0 45s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 105c0 0 125-30 250-30S0 105 0 105s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 15c0 0 125-30 250-30S0 15 0 15s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500-15c0 0 125-30 250-30S0-15 0-15s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 135c0 0 125-30 250-30S0 135 0 135s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3C/g%3E%3C/svg%3E");
+    */
+    background-attachment: fixed;
+
+    width: 100%;
+}
+/*Width is 70% of #resume-container, all content will be under this*/
+#resume-section {
+    background: white;
+    padding: var(--normal-padding) 2em;
+    /*Trick to align the div*/
+    margin: 0 auto;
+    /*Basically, 70% of the whole page.*/
+    width: 70%;
+}
+
+/*Container of Jesus callejas -> icons under header*/
+#resume-general-info {
+    margin: 0 auto;
+    text-align: center;
+    width: 100%;
+}
+#header {
+    padding-bottom: 1em;
+}
+#general-icons-container {
+    width: 100%;
+    margin: 1em 0;
+}
+
+/************Overview Container***********/
+#overview-information p {
+    margin: .5em 0;
+}
+
+/************Experience Container***********/
+.experience-item ul {
+    list-style: square outside none;
+    /*Need to include both margin and padding, due to difference in styling ul's on browsers*/
+    padding-left: 1em;
+    margin-left: 1em;
+}
+.experience-item ul li { font-weight: 200; }
+
+/***********Qualifications container*************/
+#qualifications-information {
+    height: 100%;
+    width: 60%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+/*This code is copied from the index.css, you can create a separate file and place this in that file if you want to.*/
+.progress-container {
+    margin: 1em 0;
+    background: var(--main-color);
+    height: .7em;
+    width: 40%;
+    position: relative;
+}
+.progress-percent {
+    height: 100%;
+    /*Percent put here*/
+    width: 80%;
+    background: linear-gradient(to left, red, darkred);
+}
+.progress-percentage {
+    position: absolute;
+    right: -35;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.progress-title {
+    position: absolute;
+    top: -18;
+    left: 0;
+    color: black;
+}
+
+/*Containers*/
+.information-column {
+    /*Each right side of a section needs to have a 60% width.*/
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.resume-section {
+    margin: 0 auto;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+hr {
+    width: 100%;
+    border: 0;
+    height: 1px;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+    margin: 1.5em  0;
+}
+.light { font-weight: 200; }
+.strong { font-weight: 900; }

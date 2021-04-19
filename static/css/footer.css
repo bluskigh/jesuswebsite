@@ -1,0 +1,30 @@
+
+/*Footer section*/
+footer {
+    font-size: .8em;
+    background: var(--main-color);
+    width: 100%;
+    padding: 2em 0;
+    color: white;
+}
+footer ul { list-style: none; }
+footer ul a { color: white; }
+#footer-navigation {
+    position: relative;
+    height: 100%;
+    width: 15%;
+}
+#footer-navigation ul { border-left: 1px solid white; margin: .5em; padding-left: .25em; }
+.social-icon { height: 30px; width: 30px; border-radius: 50%; background: gray; margin: 0; padding: 0; }
+#footer-social-icons {
+    height: 100%;
+    width: 10%;
+    margin: 0; padding: 0;
+}
+footer img { transition: .343s ease; margin: 0 .5em; filter: invert(100%); }
+footer a:focus { outline: none; }
+footer img:hover {
+    filter: invert(50%);
+    transform: translateY(-3px);
+}
+

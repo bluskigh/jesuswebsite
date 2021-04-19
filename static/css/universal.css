@@ -1,0 +1,21 @@
+:root {
+    --main-color: #2A2626;
+    --secondary-color: #F0E5E5;
+    --accent-color: #DF2222;
+    --secondary-accent-color: #E3CF18;
+    --normal-padding: 3em;
+}
+::-moz-selection { background-color: var(--accent-color); }
+body::selection { background-color: var(--accent-color); }
+html, body, ul, li, a, h1, h2, h3, h4, h5, p { margin: 0; padding: 0; }
+html { scroll-behavior: smooth; overflow-x: hidden; }
+p { line-height: 1.4em; }
+h1, h2, h3, h4, h5, h6, p, li, label, a { font-family: 'Roboto', sans-serif; }
+h1 { font-weight: 900; font-size: 4em; }
+h2 { font-size: 2em; }
+h3 { font-size: 1.5em; }
+li { font-weight: 900; }
+p { font-family: 'Roboto', sans-serif; font-weight: 300; }
+a { text-decoration: none; }
+a:hover { color: gray; }
+button:focus { outline: none; opacity: .5;}
